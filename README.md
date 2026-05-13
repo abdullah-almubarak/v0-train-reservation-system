@@ -1,35 +1,25 @@
-# train-system
+# Train Schedule and Reservation Management System
 
-This is a [Next.js](https://nextjs.org) project bootstrapped with [v0](https://v0.app).
+## Project Overview
+[cite_start]A unified platform designed to provide efficient scheduling and reservation services for trains[cite: 14]. [cite_start]The system enables management of passenger bookings and ticketing processes while centralizing data for staff and passengers[cite: 15, 16].
 
-## Built with v0
+## Project Objectives
+* [cite_start]Provide a secure user interface for booking and viewing train details[cite: 75].
+* [cite_start]Increase data accuracy and reduce human error in bookings[cite: 76].
+* [cite_start]Implement Role-Based Access Control (RBAC) to ensure system security[cite: 41, 78].
+* [cite_start]Support decision-making through reporting and analytics tools[cite: 33, 36].
 
-This repository is linked to a [v0](https://v0.app) project. You can continue developing by visiting the link below -- start new chats to make changes, and v0 will push commits directly to this repo. Every merge to `main` will automatically deploy.
+## Team Members
+* [cite_start]**Faris Al-Sadoon** - Team Leader [cite: 5]
+* [cite_start]**Yazen Al-Otaibi** - System Architecture & Design [cite: 5, 413]
+* [cite_start]**Abdullah Al-Mubarak** - Sequence Diagrams & UI Design [cite: 5, 414]
+* [cite_start]**Faisal Al-Rajhi** - Activity Diagrams & Requirements [cite: 5, 415]
 
-[Continue working on v0 →](https://v0.app/chat/projects/prj_b5sfT7V7AM18OkZiZ73LZlUtx7ft)
+## Phase 3 Implementation (75% Complete)
+* [cite_start]**Functional Modules**: Login Interface, Train Schedule Interface, and Reservation Component[cite: 322, 323, 324, 359].
+* [cite_start]**Architecture**: Implemented using a Layered Architecture (Presentation, Business Logic, Data Access, and Database)[cite: 319, 349].
+* [cite_start]**System Models**: Based on established Use Case, Sequence, and Class diagrams[cite: 292, 293].
 
-## Getting Started
-
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-## Learn More
-
-To learn more, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-- [v0 Documentation](https://v0.app/docs) - learn about v0 and how to use it.
-
-<a href="https://v0.app/chat/api/kiro/clone/abdullah-almubarak/v0-train-reservation-system" alt="Open in Kiro"><img src="https://pdgvvgmkdvyeydso.public.blob.vercel-storage.com/open%20in%20kiro.svg?sanitize=true" /></a>
+## Instructions
+1. Run the development server using `npm run dev`.
+2. Open `http://localhost:3000` to access the system interface.

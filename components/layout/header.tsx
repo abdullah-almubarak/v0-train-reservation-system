@@ -2,6 +2,7 @@
 
 import { useRouter } from "next/navigation"
 import { useAuth } from "@/lib/auth-context"
+import { useTheme } from "@/lib/theme-context"
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -13,12 +14,17 @@ import {
 import { Avatar, AvatarFallback } from "@/components/ui/avatar"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
-import { Train, LogOut, User, Settings, LayoutDashboard } from "lucide-react"
+import { Train, LogOut, User, Settings, LayoutDashboard, Moon, Sun } from "lucide-react"
 import Link from "next/link"
 
 export function Header() {
   const router = useRouter()
   const { user, logout, isAuthenticated } = useAuth()
+  const { resolvedTheme, setTheme } = useTheme()
+
+  const toggleTheme = () => {
+    setTheme(resolvedTheme === "dark" ? "light" : "dark")
+  }
 
   const handleLogout = () => {
     logout()
@@ -59,7 +65,21 @@ export function Header() {
         </Link>
 
         {isAuthenticated && user ? (
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-3">
+            <Button
+              variant="ghost"
+              size="icon"
+              onClick={toggleTheme}
+              className="h-9 w-9"
+            >
+              {resolvedTheme === "dark" ? (
+                <Sun className="h-4 w-4" />
+              ) : (
+                <Moon className="h-4 w-4" />
+              )}
+              <span className="sr-only">Toggle theme</span>
+            </Button>
+
             <Badge className={getRoleBadgeColor(user.role)} variant="secondary">
               {user.role.charAt(0).toUpperCase() + user.role.slice(1)}
             </Badge>

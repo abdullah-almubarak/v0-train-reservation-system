@@ -2,11 +2,14 @@
 
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import { Settings, Bell, Lock, Eye, Palette } from "lucide-react"
+import { Settings, Bell, Lock, Eye, Palette, Sun, Moon, Monitor } from "lucide-react"
 import { Switch } from "@/components/ui/switch"
 import { Label } from "@/components/ui/label"
+import { useTheme } from "@/lib/theme-context"
 
 export default function SettingsPage() {
+  const { theme, setTheme, resolvedTheme } = useTheme()
+
   return (
     <div className="space-y-6 max-w-2xl">
       <div>
@@ -115,14 +118,41 @@ export default function SettingsPage() {
           <CardDescription>Customize the look and feel</CardDescription>
         </CardHeader>
         <CardContent className="space-y-4">
-          <div className="flex items-center justify-between">
-            <div className="space-y-0.5">
-              <Label>Dark Mode</Label>
-              <p className="text-sm text-muted-foreground">
-                Use dark theme
-              </p>
+          <div className="space-y-3">
+            <Label>Theme</Label>
+            <div className="flex gap-2">
+              <Button
+                variant={theme === "light" ? "default" : "outline"}
+                size="sm"
+                onClick={() => setTheme("light")}
+                className="flex-1"
+              >
+                <Sun className="w-4 h-4 mr-2" />
+                Light
+              </Button>
+              <Button
+                variant={theme === "dark" ? "default" : "outline"}
+                size="sm"
+                onClick={() => setTheme("dark")}
+                className="flex-1"
+              >
+                <Moon className="w-4 h-4 mr-2" />
+                Dark
+              </Button>
+              <Button
+                variant={theme === "system" ? "default" : "outline"}
+                size="sm"
+                onClick={() => setTheme("system")}
+                className="flex-1"
+              >
+                <Monitor className="w-4 h-4 mr-2" />
+                System
+              </Button>
             </div>
-            <Switch />
+            <p className="text-sm text-muted-foreground">
+              Current theme: {resolvedTheme === "dark" ? "Dark" : "Light"}
+              {theme === "system" && " (following system preference)"}
+            </p>
           </div>
         </CardContent>
       </Card>

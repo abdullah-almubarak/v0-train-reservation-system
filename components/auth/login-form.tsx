@@ -8,13 +8,11 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { Train, User, Lock, Mail, AlertCircle, Moon, Sun } from "lucide-react"
-import { useTheme } from "@/lib/theme-context"
+import { Train, User, Lock, Mail, AlertCircle } from "lucide-react"
 
 export function LoginForm() {
   const router = useRouter()
   const { login, register } = useAuth()
-  const { resolvedTheme, setTheme } = useTheme()
   const [isLoading, setIsLoading] = useState(false)
   const [error, setError] = useState("")
 
@@ -75,22 +73,7 @@ export function LoginForm() {
   }
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-background p-4 relative">
-      {/* Theme Toggle */}
-      <Button
-        variant="ghost"
-        size="icon"
-        onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")}
-        className="absolute top-4 right-4 h-9 w-9"
-      >
-        {resolvedTheme === "dark" ? (
-          <Sun className="h-4 w-4" />
-        ) : (
-          <Moon className="h-4 w-4" />
-        )}
-        <span className="sr-only">Toggle theme</span>
-      </Button>
-
+    <div className="min-h-screen flex items-center justify-center bg-background p-4">
       <div className="w-full max-w-md">
         {/* Logo and Title */}
         <div className="flex flex-col items-center mb-8">

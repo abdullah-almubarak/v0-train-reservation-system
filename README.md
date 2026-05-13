@@ -21,7 +21,7 @@ A unified platform designed to provide efficient scheduling and reservation serv
 * System Models: Based on established Use Case, Sequence, and Class diagrams.
 
 ## Deployment & Testing
-* **Live Demo:** https:{ //v0-train-reservation-system-phi.vercel.app/ }
+* **Live Demo:** https://v0-train-reservation-system-phi.vercel.app/ to access the website.
 * **Local Development**:
   1. Run `npm install` to install dependencies.
   2. Run `npm run dev` to start the local server.

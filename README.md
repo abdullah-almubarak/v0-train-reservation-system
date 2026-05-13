@@ -20,6 +20,9 @@ A unified platform designed to provide efficient scheduling and reservation serv
 * Architecture: Implemented using a Layered Architecture (Presentation, Business Logic, Data Access, and Database).
 * System Models: Based on established Use Case, Sequence, and Class diagrams.
 
-## Instructions
-1. Run the development server using npm run dev.
-2. Open http://localhost:3000 to access the system interface.
+## Deployment & Testing
+* **Live Demo:** https:{ //v0-train-reservation-system-phi.vercel.app/ }
+* **Local Development**:
+  1. Run `npm install` to install dependencies.
+  2. Run `npm run dev` to start the local server.
+  3. Open http://localhost:3000 to access the system interface.

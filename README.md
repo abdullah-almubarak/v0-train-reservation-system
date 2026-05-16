@@ -16,7 +16,7 @@ A unified platform designed to provide efficient scheduling and reservation serv
 * Faisal Al-Rajhi - Activity Diagrams & Requirements
 
 ## Phase 3 Implementation (75% Complete)
-* Functional Modules: Login Interface, Train Schedule Interface, and Reservation Component.
+* Functional Modules:  Login Interface, Train Schedule Interface, and Reservation Component.
 * Architecture: Implemented using a Layered Architecture (Presentation, Business Logic, Data Access, and Database).
 * System Models: Based on established Use Case, Sequence, and Class diagrams.
 
